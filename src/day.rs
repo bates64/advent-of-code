@@ -7,6 +7,12 @@ pub enum Error {
     #[error("todo")]
     Unimplemented,
 
+    #[error("no solution")]
+    NoSolution,
+
+    #[error("bad input: {0}")]
+    BadInput(#[from] std::num::ParseIntError),
+
     #[error("{0}")]
     Io(#[from] std::io::Error),
 }
