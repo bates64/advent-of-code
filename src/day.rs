@@ -1,6 +1,7 @@
 use thiserror::Error;
 
 mod day1;
+mod day2;
 
 #[derive(Error, Debug)]
 pub enum Error {
@@ -27,5 +28,5 @@ pub const NUM_DAYS: usize = 2;
 
 pub const ALL_DAYS: [(Solution, Solution); NUM_DAYS] = [
     (day1::part1, day1::part2),
-    (todo, todo),
+    (day2::part1, day2::part2),
 ];
