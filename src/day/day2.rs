@@ -44,7 +44,7 @@ pub fn part2() -> Result<String, Error> {
             let a = password.chars().nth(*idx_a - 1).unwrap_or_default() == *ch;
             let b = password.chars().nth(*idx_b - 1).unwrap_or_default() == *ch;
 
-            (a && !b) || (b && !a)
+            a ^ b
         })
         .count()
         .to_string())
