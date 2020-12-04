@@ -1,5 +1,5 @@
 use super::Error;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
 use std::str::FromStr;
 use regex::Regex;
 
