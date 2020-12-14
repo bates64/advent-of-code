@@ -35,7 +35,7 @@ pub fn part2() -> Result<String, Error> {
     for (delta, id) in buses {
         loop {
             if (time + delta) % id == 0 {
-                stride = lcm(id, stride);
+                stride = id * stride; // lcm, but they're prime
                 break;
             }
 
@@ -44,17 +44,4 @@ pub fn part2() -> Result<String, Error> {
     }
 
     Ok(time.to_string())
-}
-
-fn lcm(a: usize, b: usize) -> usize {
-    (a * b) / gcd(a, b)
-}
-
-fn gcd(mut a: usize, mut b: usize) -> usize {
-    while b != 0 {
-        let rem = a % b;
-        a = b;
-        b = rem;
-    }
-    a
 }
