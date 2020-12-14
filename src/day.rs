@@ -14,6 +14,7 @@ mod day9;
 mod day10;
 mod day11;
 mod day12;
+mod day13;
 
 #[derive(Error, Debug)]
 pub enum Error {
@@ -36,7 +37,7 @@ fn todo() -> Result<String, Error> {
     Err(Error::Unimplemented)
 }
 
-pub const NUM_DAYS: usize = 12;
+pub const NUM_DAYS: usize = 13;
 
 pub const ALL_DAYS: [(Solution, Solution); NUM_DAYS] = [
     (day1::part1, day1::part2),
@@ -51,4 +52,5 @@ pub const ALL_DAYS: [(Solution, Solution); NUM_DAYS] = [
     (day10::part1, day10::part2),
     (day11::part1, day11::part2),
     (day12::part1, day12::part2),
+    (day13::part1, day13::part2),
 ];
