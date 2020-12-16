@@ -122,7 +122,7 @@ pub fn part2() -> Result<String, Error> {
         })
         .collect();
 
-    let mut fields: Vec<Vec<Requirement>> = vec![requirements; your_ticket.len()];
+    let mut fields: Vec<Vec<&Requirement>> = vec![requirements.iter().collect(); your_ticket.len()];
 
     loop {
         let (unknown, known): (Vec<_>, Vec<_>) = fields
@@ -136,7 +136,7 @@ pub fn part2() -> Result<String, Error> {
 
         let known: Vec<&Requirement> = known
             .into_iter()
-            .map(|(_, reqs)| &reqs[0])
+            .map(|(_, reqs)| reqs[0])
             .collect();
 
         for (idx, reqs) in unknown {
