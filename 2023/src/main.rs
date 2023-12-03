@@ -19,7 +19,7 @@ fn main() {
             Err(error) => {
                 eprintln!("could not parse day number ({})", error);
                 exit(1);
-            },
+            }
         },
     };
 
@@ -34,7 +34,7 @@ fn main() {
                 println!("{}", Paint::red("unknown day?").bold());
                 fail = true;
                 continue;
-            },
+            }
         };
 
         match part1() {
@@ -42,7 +42,7 @@ fn main() {
             Err(error) => {
                 print!("{}", Paint::red(error));
                 fail = true;
-            },
+            }
         }
 
         print!("  ...  ");
@@ -52,7 +52,7 @@ fn main() {
             Err(error) => {
                 print!("{}", Paint::red(error));
                 fail = true;
-            },
+            }
         }
 
         print!("\n");

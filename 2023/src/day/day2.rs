@@ -12,8 +12,10 @@ pub fn part1() -> Result<String, Error> {
         let mut is_game_valid = true;
 
         let colon = line.find(':').expect("line missing colon");
-        let game = &line["Game ".len()..colon].parse::<u32>().expect("bad game number");
-        
+        let game = &line["Game ".len()..colon]
+            .parse::<u32>()
+            .expect("bad game number");
+
         for round in line[colon + 2..].split("; ") {
             for part in round.split(", ") {
                 let space = part.find(' ').expect("part missing space");
