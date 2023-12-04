@@ -4,6 +4,7 @@ use thiserror::Error;
 
 mod day1;
 mod day2;
+mod day3;
 
 #[derive(Error, Debug)]
 pub enum Error {
@@ -26,9 +27,10 @@ fn todo() -> Result<String, Error> {
     Err(Error::Unimplemented)
 }
 
-pub const NUM_DAYS: usize = 2;
+pub const NUM_DAYS: usize = 3;
 
 pub const ALL_DAYS: [(Solution, Solution); NUM_DAYS] = [
     (day1::part1, day1::part2),
     (day2::part1, day2::part2),
+    (day3::part1, day3::part2),
 ];
