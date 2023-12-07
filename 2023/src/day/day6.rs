@@ -58,7 +58,7 @@ pub fn part2() -> Result<String, Error> {
 }
 
 // https://www.desmos.com/calculator/csqxghr3nm
-// we have the quadratic x=x(t-x)
+// we have the quadratic y=x(t-x)
 // in standard form, this is x^2 - tx + y = 0
 fn solve_quadratic(t: f64, y: f64) -> (f64, f64) {
     let discriminant = t.powi(2) - 4.0 * y;
